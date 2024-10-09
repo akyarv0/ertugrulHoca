@@ -24,7 +24,6 @@ body {
 header {
   padding: 10px;
   margin-top: 40px;
-
 }
 
 .header-container {
@@ -77,17 +76,15 @@ header {
 .icon-heart,
 .icon-cart {
   cursor: pointer;
-  
-  
 }
-.icon-heart:hover, .icon-cart :hover{
-    color: #ff4d4d;
+.icon-heart:hover,
+.icon-cart :hover {
+  color: #ff4d4d;
 }
-
 
 .nav-menu {
   background-color: #f4f4f4;
- 
+
   margin-top: 10px;
   display: flex;
   justify-content: flex-start;
@@ -119,7 +116,7 @@ header {
   text-align: center;
   margin-top: 35px;
   border: #333 1px solid;
-    margin-left: 10px;
+  margin-left: 10px;
 }
 .main-banner h2 {
   font-size: 2.8em;
@@ -176,7 +173,6 @@ header {
   white-space: nowrap; /* Uzun yazıları tek satırda tutar */
 }
 
-
 /* Grid Structure */
 .product-grid {
   display: grid;
@@ -200,7 +196,7 @@ header {
   max-width: 100%;
   height: 400px;
   border-radius: 5px;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 /* Badge Styling */
@@ -247,13 +243,13 @@ header {
   bottom: 100px;
   right: 30px;
   font-size: 24px;
-  color: white; 
-  cursor:pointer; 
+  color: white;
+  cursor: pointer;
   z-index: 10;
 }
 
 .heart-icon:hover {
-  color: #ff4d4d; 
+  color: #ff4d4d;
 }
 
 .transport-section {
@@ -303,12 +299,107 @@ footer {
 .footer-section ul li a {
   color: black;
   text-decoration: none;
-  
 }
-.footer-section ul li a:hover{
-    cursor: pointer;
+.footer-section ul li a:hover {
+  cursor: pointer;
 }
 .footer-bottom {
   font-size: 1.2em;
   text-align: center;
+}
+
+@media (max-width: 640px) {
+  /* Genel */
+  body {
+    padding: 10px;
+  }
+
+  /* Header */
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container1 {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .logo img {
+    width: 100vw;
+    padding:0 20px
+  }
+
+  .search-bar {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .header-icons {
+    margin-top: 10px;
+  }
+
+  /* Navigation Menu */
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu ul li {
+    margin-top: 10px;
+  }
+
+  /* Main Banner */
+  .main-banner {
+    flex-direction: column;
+  }
+
+  .main-image {
+    width: 100%;
+  }
+
+  /* Product Highlights */
+  .product-highlights {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlight-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Product Grid */
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: auto;
+  }
+
+  /* Transport Section */
+  .transport-section {
+    flex-direction: column;
+  }
+
+  .transport-item {
+    margin-bottom: 20px;
+  }
+
+  /* Footer */
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
 }
