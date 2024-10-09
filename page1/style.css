@@ -4,22 +4,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #333;
-  /* padding: 20px; */
+  min-width: 320px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-}
 /* Genel header stilleri */
 header {
   padding: 10px;
@@ -45,28 +37,27 @@ header {
 
 /* Arama çubuğu ve ikon stilleri */
 .search-bar {
-  position: relative; /* Iconu input alanının içinde konumlandırmak için */
+  position: relative;
   margin-left: 20px;
 }
 
 .search-bar input {
-  padding: 10px 40px 10px 30px; /* Sol tarafta ikona yer bırakmak için padding */
+  padding: 10px 40px 10px 30px;
   font-size: 16px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 1px solid #ccc;
   width: 380px;
 }
 
 .search-icon {
   position: absolute;
-  left: 10px; /* Input alanının içinde sol tarafa konumlandırma */
+  left: 10px;
   top: 50%;
-  transform: translateY(-50%); /* Dikey ortalama */
+  transform: translateY(-50%);
   font-size: 16px;
-  color: #aaa; /* İkon rengi */
+  color: #aaa;
 }
 
-/* İkonların stilleri */
 .header-icons {
   display: flex;
   gap: 15px;
@@ -77,6 +68,7 @@ header {
 .icon-cart {
   cursor: pointer;
 }
+
 .icon-heart:hover,
 .icon-cart :hover {
   color: #ff4d4d;
@@ -84,7 +76,6 @@ header {
 
 .nav-menu {
   background-color: #f4f4f4;
-
   margin-top: 10px;
   display: flex;
   justify-content: flex-start;
@@ -110,7 +101,6 @@ header {
 }
 
 /* Main Banner */
-
 .main-banner {
   display: flex;
   text-align: center;
@@ -118,19 +108,23 @@ header {
   border: #333 1px solid;
   margin-left: 10px;
 }
+
 .main-banner h2 {
   font-size: 2.8em;
   margin-top: 80px;
 }
+
 .main-banner p {
   margin: 15px 0;
   font-size: 1.5em;
   margin-top: 30px;
 }
+
 .main-banner img {
   width: 100%;
   height: auto;
 }
+
 .main-image {
   width: 65%;
   padding: 20px;
@@ -149,7 +143,7 @@ header {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  position: relative; /* Yazının pozisyonu için gerekli */
+  position: relative;
 }
 
 .image-container {
@@ -169,8 +163,7 @@ header {
   transform: translate(-50%, -50%);
   color: rgb(212, 201, 201);
   font-size: 1.5rem;
-
-  white-space: nowrap; /* Uzun yazıları tek satırda tutar */
+  white-space: nowrap;
 }
 
 /* Grid Structure */
@@ -185,13 +178,12 @@ header {
 .product-card {
   background-color: white;
   padding: 20px;
-  text-align: left; /* Left-aligned content */
+  text-align: left;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
-/* Image Styling */
 .product-card img {
   max-width: 100%;
   height: 400px;
@@ -199,7 +191,6 @@ header {
   object-fit: cover;
 }
 
-/* Badge Styling */
 .product-card .badge {
   position: absolute;
   top: 20px;
@@ -210,10 +201,9 @@ header {
   border-radius: 5px;
 }
 
-/* Flexbox for h3 and p */
 .title-price {
   display: flex;
-  justify-content: space-between; /* Spreads h3 and p to left and right */
+  justify-content: space-between;
   align-items: center;
   margin: 10px 0;
 }
@@ -229,7 +219,6 @@ header {
   color: #666;
 }
 
-/* Align h4 to the right */
 .info h4 {
   text-align: left;
   margin: 10px 0;
@@ -237,7 +226,6 @@ header {
   color: #666;
 }
 
-/* Heart Icon Styling */
 .heart-icon {
   position: absolute;
   bottom: 100px;
@@ -260,14 +248,16 @@ header {
   background-color: #f4f4f4;
   margin-top: 50px;
 }
+
 .transport-item {
   text-align: center;
-  font-family: Arial, sans-serif;
 }
+
 .transport-item i {
   font-size: 2rem;
   margin-bottom: 10px;
 }
+
 .transport-item p {
   font-size: 1rem;
   color: #333;
@@ -282,89 +272,93 @@ footer {
   border-top: #333 1px solid;
   padding-left: 20px;
 }
+
 .footer-links {
   display: flex;
-  /* justify-content: space-around; */
   margin-bottom: 20px;
   align-items: flex-start;
   gap: 40px;
   margin-left: 10px;
 }
+
 .footer-section ul {
   list-style: none;
 }
+
 .footer-section ul li {
   margin: 10px 0;
 }
+
 .footer-section ul li a {
   color: black;
   text-decoration: none;
 }
+
 .footer-section ul li a:hover {
   cursor: pointer;
 }
+
 .footer-bottom {
   font-size: 1.2em;
   text-align: center;
 }
 
+/* Media Queries for Responsiveness */
 @media (max-width: 640px) {
-  /* Genel */
   body {
     padding: 10px;
   }
 
-  /* Header */
   .header-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    position: relative;
   }
 
   .container1 {
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
   }
 
   .logo img {
-    width: 100vw;
-    padding:0 20px
+    width: 100%;
+    padding: 0;
+    margin-bottom: 10px;
   }
 
   .search-bar {
-    margin-left: 0;
-    width: 100%;
-    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+  
+   width: 70vw;
   }
 
   .search-bar input {
-    width: 100%;
+    width: 60vw;
   }
 
   .header-icons {
-    margin-top: 10px;
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+    gap: 10px;
   }
 
-  /* Navigation Menu */
   .nav-menu ul {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .nav-menu ul li {
-    margin-top: 10px;
-  }
-
-  /* Main Banner */
   .main-banner {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .main-image {
     width: 100%;
   }
 
-  /* Product Highlights */
   .product-highlights {
     flex-direction: column;
     align-items: center;
@@ -375,31 +369,64 @@ footer {
     margin-bottom: 20px;
   }
 
-  /* Product Grid */
   .product-grid {
     grid-template-columns: 1fr;
   }
 
   .product-card img {
-    height: auto;
+    height: 80vh;
+    width: 100%;
   }
 
-  /* Transport Section */
   .transport-section {
-    flex-direction: column;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: flex-start; /* Align items to the left */
   }
 
   .transport-item {
-    margin-bottom: 20px;
+    display: flex; /* Enable flexbox for each item */
+    align-items: center; /* Align icon and text vertically center */
+    margin-bottom: 10px;
   }
 
-  /* Footer */
+  .transport-item i {
+    margin-right: 8px;
+    /* Space between icon and text */
+  }
+  .transport-item p {
+    margin-bottom: 10px;
+    /* Space between icon and text */
+  }
+
   .footer-links {
     flex-direction: column;
     align-items: flex-start;
   }
+}
 
-  .footer-section {
-    margin-bottom: 20px;
+@media (max-width: 320px) {
+  body {
+    width: 320px;
+    overflow-x: hidden;
+  }
+
+  .search-bar input {
+    width: 60vw;
+    padding-right: 20px;
+  }
+
+  .product-card img {
+    width: 100%;
+  }
+}
+
+.product-highlights {
+  display: none; /* Hide by default */
+}
+
+@media (min-width: 1024px) {
+  .product-highlights {
+    display: flex; /* Or block, or grid, depending on your layout */
   }
 }
