@@ -405,6 +405,8 @@ footer {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    overflow: hidden;
+    
   }
 
   .transport-item i {
@@ -432,7 +434,7 @@ footer {
   }
   .footer-section:hover h4 {
   cursor: pointer;
-  background-color: rgb(172, 172, 241);
+  background-color: rgb(181, 181, 216);
   width: 85vw;
   border: 1px solid black;
   border-radius: 2px;
