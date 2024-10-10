@@ -430,6 +430,14 @@ footer {
   .header-icons {
     gap: 15px;
   }
+  .footer-section:hover h4 {
+  cursor: pointer;
+  background-color: rgb(172, 172, 241);
+  width: 85vw;
+  border: 1px solid black;
+  border-radius: 2px;
+  display: inline;
+}
 
 
 }
